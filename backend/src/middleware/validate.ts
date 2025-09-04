@@ -12,7 +12,7 @@ export const validate = (schema: AnyZodObject) => (req: Request, res: Response, 
 		return res.status(400).json({ errors: parsed.error.flatten() });
 	}
 
-	// ⬇️ Apply Zod transforms/coercions back onto the req
+	// Apply Zod transforms/coercions back onto the req
 	const { body, query, params } = parsed.data as any;
 	if (body) (req as any).body = body;
 	if (query) (req as any).query = query;

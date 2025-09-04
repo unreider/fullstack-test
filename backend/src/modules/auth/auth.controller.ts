@@ -1,4 +1,3 @@
-// backend/src/modules/auth/auth.controller.ts
 import { Request, Response } from "express";
 import { prisma } from "../../prisma";
 import bcrypt from "bcryptjs";

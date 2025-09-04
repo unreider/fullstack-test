@@ -19,7 +19,7 @@ export default function RegisterPage() {
 				method: "POST",
 				body: JSON.stringify({ email, password }),
 			});
-			// Option A: redirect to login after successful registration
+			// redirect to login after successful registration
 			nav("/login", { replace: true });
 		} catch (err: any) {
 			setError(() => {

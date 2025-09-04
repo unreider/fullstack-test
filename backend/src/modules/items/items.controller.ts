@@ -42,7 +42,7 @@ export async function listItems(req: Request, res: Response) {
 			where,
 			orderBy: { createdAt: "desc" },
 			skip: (page - 1) * limit,
-			take: limit, // ✅ number, not string
+			take: limit,
 		}),
 		prisma.item.count({ where }),
 	]);
